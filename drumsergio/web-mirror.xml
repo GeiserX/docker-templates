@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>web-mirror</Name>
+  <Repository>drumsergio/web-mirror:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/web-mirror</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/web-mirror/issues</Support>
+  <Project>https://github.com/GeiserX/web-mirror</Project>
+  <Overview>Mirror any webpage to a local server for offline access. Uses Playwright and BeautifulSoup to crawl and download web pages, including video content, with link rewriting for local browsing.&#xD;
+[br][br]&#xD;
+Pair with an nginx container to serve the mirrored content locally.&#xD;
+[br][br]&#xD;
+More info: https://github.com/GeiserX/web-mirror</Overview>
+  <Category>Network:Web Tools:</Category>
+  <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/web-mirror.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/images/web-mirror.png</Icon>
+  <ExtraSearchTerms>web mirror offline download crawler scraper archive webpage</ExtraSearchTerms>
+  <Config Name="Data Directory" Target="/data" Default="/mnt/user/appdata/web-mirror/data" Mode="rw" Description="Directory to store mirrored web pages and assets" Type="Path" Display="always" Required="true" Mask="false"/>
+</Container>
