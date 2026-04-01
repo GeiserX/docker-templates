@@ -5,15 +5,15 @@
   <Registry>https://hub.docker.com/r/drumsergio/genieacs</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/GeiserX/genieacs-docker/issues</Support>
-  <Project>https://github.com/GeiserX/genieacs-docker</Project>
+  <Support>https://github.com/GeiserX/genieacs-container/issues</Support>
+  <Project>https://github.com/GeiserX/genieacs-container</Project>
   <Overview>Production-ready Docker image for GenieACS, an open-source TR-069 (CWMP) Auto Configuration Server. Manage and provision CPE devices (routers, ONTs, gateways) via TR-069 protocol with a built-in web UI, REST API, and firmware file server. Multi-arch (amd64/arm64), non-root runtime, integrated log rotation.&#xD;
 [br][br]&#xD;
 Includes 4 services managed by supervisord: CWMP (device communication), NBI (REST API), FS (file server), and UI (web dashboard).&#xD;
 [br][br]&#xD;
 [b]Requires MongoDB.[/b] Set GENIEACS_MONGODB_CONNECTION_URL to your MongoDB instance.&#xD;
 [br][br]&#xD;
-More info: https://github.com/GeiserX/genieacs-docker</Overview>
+More info: https://github.com/GeiserX/genieacs-container</Overview>
   <Category>Network:Management</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/genieacs.xml</TemplateURL>
