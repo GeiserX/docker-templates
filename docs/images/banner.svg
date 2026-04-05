@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2496ED"/>
+      <stop offset="100%" stop-color="#0D1B2A"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="200" rx="12" fill="url(#bg)"/>
+
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="50" x2="900" y2="50"/><line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="150" x2="900" y2="150"/><line x1="150" y1="0" x2="150" y2="200"/>
+    <line x1="300" y1="0" x2="300" y2="200"/><line x1="450" y1="0" x2="450" y2="200"/>
+    <line x1="600" y1="0" x2="600" y2="200"/><line x1="750" y1="0" x2="750" y2="200"/>
+  </g>
+
+  <!-- Unraid / template grid icon -->
+  <g transform="translate(65, 50)">
+    <!-- Grid of container boxes -->
+    <rect x="0" y="0" width="30" height="25" rx="3" fill="url(#glow)" stroke="#ffffff" stroke-width="1.5" opacity="0.9"/>
+    <rect x="35" y="0" width="30" height="25" rx="3" fill="url(#glow)" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+    <rect x="0" y="30" width="30" height="25" rx="3" fill="url(#glow)" stroke="#ffffff" stroke-width="1.5" opacity="0.7"/>
+    <rect x="35" y="30" width="30" height="25" rx="3" fill="url(#glow)" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+    <rect x="0" y="60" width="30" height="25" rx="3" fill="url(#glow)" stroke="#ffffff" stroke-width="1.5" opacity="0.5"/>
+    <rect x="35" y="60" width="30" height="25" rx="3" fill="url(#glow)" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+    <!-- Dots inside boxes -->
+    <circle cx="15" cy="12" r="3" fill="#ffffff" opacity="0.5"/>
+    <circle cx="50" cy="12" r="3" fill="#ffffff" opacity="0.4"/>
+    <circle cx="15" cy="42" r="3" fill="#ffffff" opacity="0.4"/>
+    <circle cx="50" cy="42" r="3" fill="#ffffff" opacity="0.3"/>
+    <circle cx="15" cy="72" r="3" fill="#ffffff" opacity="0.3"/>
+    <circle cx="50" cy="72" r="3" fill="#ffffff" opacity="0.2"/>
+  </g>
+
+  <text x="195" y="95" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="42" font-weight="700" fill="#ffffff" letter-spacing="-1">
+    Docker Templates
+  </text>
+
+  <text x="197" y="130" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="16" fill="#ffffff" opacity="0.65" letter-spacing="0.3">
+    Unraid Community Applications templates for drumsergio images
+  </text>
+
+  <g transform="translate(755, 42)" opacity="0.15">
+    <text x="0" y="0" font-family="monospace" font-size="11" fill="#ffffff">&lt;Container&gt;</text>
+    <text x="0" y="16" font-family="monospace" font-size="11" fill="#ffffff">  &lt;Name&gt;app&lt;/&gt;</text>
+    <text x="0" y="32" font-family="monospace" font-size="11" fill="#ffffff">  &lt;Registry&gt;</text>
+    <text x="0" y="48" font-family="monospace" font-size="11" fill="#ffffff">   drumsergio</text>
+    <text x="0" y="64" font-family="monospace" font-size="11" fill="#ffffff">  &lt;/Registry&gt;</text>
+    <text x="0" y="80" font-family="monospace" font-size="11" fill="#ffffff">&lt;/Container&gt;</text>
+  </g>
+</svg>

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/banner.svg" alt="Docker Templates banner" width="900"/>
+</p>
+
 # Unraid Docker Templates
 
 Community Applications templates for [drumsergio](https://hub.docker.com/u/drumsergio) Docker images.
