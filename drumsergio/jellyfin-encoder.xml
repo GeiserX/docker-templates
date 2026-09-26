@@ -1,17 +1,19 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>jellyfin-encoder</Name>
-  <Repository>drumsergio/jellyfin-encoder:latest</Repository>
-  <Registry>https://hub.docker.com/r/drumsergio/jellyfin-encoder</Registry>
+  <Repository>drumsergio/quality-gate-encoder:latest</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/quality-gate-encoder</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/GeiserX/jellyfin-encoder/issues</Support>
-  <Project>https://github.com/GeiserX/jellyfin-encoder</Project>
+  <Support>https://github.com/GeiserX/quality-gate-encoder/issues</Support>
+  <Project>https://github.com/GeiserX/quality-gate-encoder</Project>
   <Overview>Monitors a media library and automatically transcodes videos to 720p in HEVC or AV1 codec with hardware acceleration (NVIDIA NVENC or Intel QSV). Creates symlinks for Jellyfin version management with configurable filename suffixes. Includes periodic cleanup of orphaned symlinks.&#xD;
 [br][br]&#xD;
 [b]For NVIDIA GPU:[/b] Pass through the GPU runtime. [b]For Intel QSV:[/b] Map /dev/dri.&#xD;
 [br][br]&#xD;
-More info: https://github.com/GeiserX/jellyfin-encoder</Overview>
+More info: https://github.com/GeiserX/quality-gate-encoder</Overview>
+  <Changes>### 2026.09.26&#xD;
+- Renamed to quality-gate-encoder. The image is now drumsergio/quality-gate-encoder; drumsergio/jellyfin-encoder gets the same releases until 2027-03-31.</Changes>
   <Category>MediaApp:Video</Category>
   <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/jellyfin-encoder.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/images/jellyfin-encoder.png</Icon>

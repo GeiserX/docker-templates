@@ -27,7 +27,7 @@ https://github.com/GeiserX/docker-templates
 | [CashPilot Worker](https://github.com/GeiserX/CashPilot) | `drumsergio/cashpilot-worker` | Passive income container manager (worker) |
 | [Way-CMS](https://github.com/GeiserX/Way-CMS) | `drumsergio/way-cms` | Static website CMS with live editor |
 | [Paperless Telegram Bot](https://github.com/GeiserX/paperless-telegram-bot) | `drumsergio/paperless-telegram-bot` | Telegram bot for Paperless-NGX |
-| [Jellyfin Encoder](https://github.com/GeiserX/jellyfin-encoder) | `drumsergio/jellyfin-encoder` | Video transcoding with HW acceleration |
+| [Quality Gate Encoder](https://github.com/GeiserX/quality-gate-encoder) (formerly Jellyfin Encoder) | `drumsergio/quality-gate-encoder` | Video transcoding for Jellyfin with HW acceleration |
 | [Nginx Mailer](https://github.com/GeiserX/nginx-mailer) | `drumsergio/nginx-mailer` | Static sites with SMTP contact form |
 | [Telegram Delay Channel Cloner](https://github.com/GeiserX/telegram-delay-channel-cloner) | `drumsergio/telegram-delay-channel-cloner` | Delayed Telegram channel relay bot |
 | [LynxPrompt](https://github.com/GeiserX/LynxPrompt) | `drumsergio/lynxprompt` | AI config management platform |
