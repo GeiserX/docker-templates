@@ -5,15 +5,15 @@
   <Registry>https://hub.docker.com/r/drumsergio/media-triage</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
-  <Support>https://github.com/GeiserX/media-triage/issues</Support>
-  <Project>https://github.com/GeiserX/media-triage</Project>
+  <Support>https://github.com/GeiserX/docker-templates/issues</Support>
+  <Project>https://hub.docker.com/r/drumsergio/media-triage</Project>
   <Overview>Automated media pipeline that monitors a Telegram group for torrent tracker posts, parses release metadata using regex, and presents everything in a review-ready web dashboard. Integrates with Prowlarr (indexer aggregator), qBittorrent, and TMDB for metadata enrichment.&#xD;
 [br][br]&#xD;
 Built on FastAPI with PostgreSQL and Telethon.&#xD;
 [br][br]&#xD;
 [b]Requires:[/b] PostgreSQL, Telegram API credentials, TMDB API key.&#xD;
 [br][br]&#xD;
-More info: https://github.com/GeiserX/media-triage</Overview>
+More info: https://hub.docker.com/r/drumsergio/media-triage</Overview>
   <Category>MediaApp:Video Downloaders:</Category>
   <WebUI>http://[IP]:[PORT:4850]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/media-triage.xml</TemplateURL>
