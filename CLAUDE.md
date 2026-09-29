@@ -6,7 +6,7 @@ Unraid Community Applications Docker templates for drumsergio images.
 
 - **Repo:** [GeiserX/docker-templates](https://github.com/GeiserX/docker-templates)
 - **Language:** XML
-- **License:** GPL-3.0
+- **License:** GPL-3.0-or-later
 
 ## Security
 
