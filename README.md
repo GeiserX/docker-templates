@@ -1,14 +1,16 @@
 <p align="center">
-  <img src="docs/images/banner.svg" alt="Docker Templates banner" width="900"/>
+  <img src="docs/images/banner.svg" alt="Docker Templates" width="900"/>
 </p>
 
 # Unraid Docker Templates
 
-Community Applications templates for [drumsergio](https://hub.docker.com/u/drumsergio) Docker images.
+<p><a href="LICENSE"><img src="https://img.shields.io/github/license/GeiserX/docker-templates?style=flat-square" alt="License"></a></p>
 
-## Installation
+Unraid Community Applications templates for the [drumsergio](https://hub.docker.com/u/drumsergio) Docker images. Add the repository once and every image below installs from the Apps tab.
 
-Add this template repository URL in Unraid's Community Applications settings:
+## Quick start
+
+In Unraid open Apps, Settings, and add this URL under Template repositories:
 
 ```
 https://github.com/GeiserX/docker-templates
@@ -29,12 +31,16 @@ https://github.com/GeiserX/docker-templates
 | [Paperless Telegram Bot](https://github.com/GeiserX/paperless-telegram-bot) | `drumsergio/paperless-telegram-bot` | Telegram bot for Paperless-NGX |
 | [Quality Gate Encoder](https://github.com/GeiserX/quality-gate-encoder) (formerly Jellyfin Encoder) | `drumsergio/quality-gate-encoder` | Video transcoding for Jellyfin with HW acceleration |
 | [Nginx Mailer](https://github.com/GeiserX/nginx-mailer) | `drumsergio/nginx-mailer` | Static sites with SMTP contact form |
-| [Telegram Delay Channel Cloner](https://github.com/GeiserX/telegram-delay-channel-cloner) | `drumsergio/telegram-delay-channel-cloner` | Delayed Telegram channel relay bot |
+| [Telegram Delay Channel Cloner](https://github.com/GeiserX/telegram-delay-channel-cloner) (archived) | `drumsergio/telegram-delay-channel-cloner` | Delayed Telegram channel relay bot |
 | [LynxPrompt](https://github.com/GeiserX/LynxPrompt) | `drumsergio/lynxprompt` | AI config management platform |
 | [Telegram slskd Local Bot](https://github.com/GeiserX/telegram-slskd-local-bot) | `drumsergio/telegram-slskd-local-bot` | Telegram bot for Soulseek/slskd music |
 | [Jellyfin Telegram Channel Sync](https://github.com/GeiserX/jellyfin-telegram-channel-sync) | `drumsergio/jellytelegram-sync` | Sync Jellyfin user access with Telegram |
-| [Media Triage](https://github.com/GeiserX/media-triage) | `drumsergio/media-triage` | Media pipeline dashboard |
+| [Media Triage](https://hub.docker.com/r/drumsergio/media-triage) | `drumsergio/media-triage` | Media pipeline dashboard |
 | [Pumperly](https://github.com/GeiserX/Pumperly) | `drumsergio/pumperly` | Fuel price & EV route planner |
 | [Duplicacy Exporter](https://github.com/GeiserX/duplicacy-exporter) | `ghcr.io/geiserx/duplicacy-exporter` | Prometheus exporter for Duplicacy metrics |
-| [Website-Diff](https://github.com/GeiserX/Website-Diff) | `drumsergio/website-diff` | Web page comparison with Wayback Machine support |
+| [Wayback-Diff](https://github.com/GeiserX/Wayback-Diff) (formerly Website-Diff) | `drumsergio/website-diff` | Web page comparison with Wayback Machine support |
 | [Web Mirror](https://github.com/GeiserX/web-mirror) | `drumsergio/web-mirror` | Mirror webpages for offline access |
+
+## License
+
+[GPL-3.0-or-later](LICENSE)
