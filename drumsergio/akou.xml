@@ -10,7 +10,7 @@
   <ReadMe>https://geiserx.github.io/akou/server/</ReadMe>
   <Overview>Self-hosted transcription server. A program uploads an audio file and reads back the text with word and segment times and speaker labels, as JSON, SRT or VTT, by long-poll, an event feed or a signed webhook. It also answers the OpenAI transcription endpoint (POST /v1/audio/transcriptions). A web page shows the job queue, the API keys, the models and the settings. This is the server mode of akou, a call recorder for macOS, with the same core.&#xD;
 [br][br]&#xD;
-[b]First use:[/b] the speech models (about 3 GB) download on the first job. Set the web page's admin password from the Unraid terminal, at least 12 characters: printf '%s' 'your-password' | docker exec -i akou akou admin set-password then log in and create one API key per program on the Keys page.&#xD;
+[b]First use:[/b] the speech models (about 3 GB) download on the first job. Set the web page's admin password from the Unraid terminal, at least 12 characters (this reads it without echo): read -rs P &amp;&amp; printf '%s' "$P" | docker exec -i akou akou admin set-password; unset P then log in and create one API key per program on the Keys page.&#xD;
 [br][br]&#xD;
 [b]Network:[/b] akou has no TLS of its own and listens on the network only with AKOU_BEHIND_PROXY set to true. Keep it on your LAN, or put a reverse proxy with TLS in front before you reach it from outside.&#xD;
 [br][br]&#xD;
