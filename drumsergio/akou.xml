@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>akou</Name>
+  <Repository>drumsergio/akou:1.0.0</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/akou</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/akou/issues</Support>
+  <Project>https://github.com/GeiserX/akou</Project>
+  <ReadMe>https://geiserx.github.io/akou/server/</ReadMe>
+  <Overview>Self-hosted transcription server. A program uploads an audio file and reads back the text with word and segment times and speaker labels, as JSON, SRT or VTT, by long-poll, an event feed or a signed webhook. It also answers the OpenAI transcription endpoint (POST /v1/audio/transcriptions). A web page shows the job queue, the API keys, the models and the settings. This is the server mode of akou, a call recorder for macOS, with the same core.&#xD;
+[br][br]&#xD;
+[b]First use:[/b] the speech models (about 3 GB) download on the first job. Set the web page's admin password from the Unraid terminal, at least 12 characters (this reads it without echo): read -rs P &amp;&amp; printf '%s' "$P" | docker exec -i akou akou admin set-password; unset P then log in and create one API key per program on the Keys page.&#xD;
+[br][br]&#xD;
+[b]Network:[/b] akou has no TLS of its own and listens on the network only with AKOU_BEHIND_PROXY set to true. Keep it on your LAN, or put a reverse proxy with TLS in front before you reach it from outside.&#xD;
+[br][br]&#xD;
+The image tag is the akou version; there is no latest tag. For a GPU use the -cuda or -vulkan tag (see the docs). More info: https://geiserx.github.io/akou/server/</Overview>
+  <Category>AI: Productivity: Tools:Utilities</Category>
+  <WebUI>http://[IP]:[PORT:8476]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/main/drumsergio/akou.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/GeiserX/docker-templates/main/drumsergio/images/akou.png</Icon>
+  <ExtraParams>--user 0:0</ExtraParams>
+  <ExtraSearchTerms>transcription speech-to-text stt asr whisper parakeet diarization subtitles openai</ExtraSearchTerms>
+  <Config Name="Web UI and API Port" Target="8476" Default="8476" Mode="tcp" Description="Web page and API" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/akou/data" Mode="rw" Description="Settings, API keys and jobs" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Models" Target="/models" Default="/mnt/user/appdata/akou/models" Mode="rw" Description="Speech models, downloaded on first use (about 3 GB)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Behind proxy" Target="AKOU_BEHIND_PROXY" Default="true" Mode="" Description="Must be true for akou to listen on the network. It has no TLS of its own: keep it on your LAN or put a TLS proxy in front." Type="Variable" Display="advanced" Required="true" Mask="false"/>
+</Container>
