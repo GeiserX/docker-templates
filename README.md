@@ -40,6 +40,7 @@ https://github.com/GeiserX/docker-templates
 | [Duplicacy Exporter](https://github.com/GeiserX/duplicacy-exporter) | `ghcr.io/geiserx/duplicacy-exporter` | Prometheus exporter for Duplicacy metrics |
 | [Wayback-Diff](https://github.com/GeiserX/Wayback-Diff) (formerly Website-Diff) | `drumsergio/website-diff` | Web page comparison with Wayback Machine support |
 | [Web Mirror](https://github.com/GeiserX/web-mirror) | `drumsergio/web-mirror` | Mirror webpages for offline access |
+| [akou](https://github.com/GeiserX/akou) | `drumsergio/akou` | Self-hosted transcription server with speaker labels and an OpenAI-compatible endpoint |
 
 ## License
 
