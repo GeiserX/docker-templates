@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>vettarr</Name>
+  <Repository>drumsergio/vettarr:1.0.0-rc.3</Repository>
+  <Registry>https://hub.docker.com/r/drumsergio/vettarr</Registry>
+  <Network>bridge</Network>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/GeiserX/vettarr/issues</Support>
+  <Project>https://github.com/GeiserX/vettarr</Project>
+  <Overview>vettarr takes a link, a Telegram post, a magnet, a .torrent file or a Seerr request, checks the title against your rules (certification, IMDb parents guide, TMDB genres and keywords, size, seeders, what your library already has) and approves it, holds it for you or refuses it. Approved items go to qBittorrent, Radarr, Sonarr or back to Seerr. Every decision keeps its reasons; shadow mode decides without acting so you can watch it first. Web UI that works from a phone, plus a Telegram bot.&#xD;
+[br][br]&#xD;
+One file configures it: /data/config.yaml (copy config.example.yaml from the project and edit it; secrets stay in the container's variables as ${VAR}). The schema is created in the empty Postgres database on the first start and upgraded on every later one.&#xD;
+[br][br]&#xD;
+[b]Requires:[/b] a PostgreSQL database (the official postgres template works). Telegram, TMDB, Prowlarr, qBittorrent, Radarr, Sonarr and Seerr are each optional and start only when the config names them.&#xD;
+[br][br]&#xD;
+Licence AGPL-3.0-or-later. Docs: https://github.com/GeiserX/vettarr/blob/main/docs/CONFIG.md</Overview>
+  <Category>MediaApp:Video Downloaders:</Category>
+  <WebUI>http://[IP]:[PORT:4850]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/main/drumsergio/vettarr.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/GeiserX/docker-templates/main/drumsergio/images/vettarr.png</Icon>
+  <ExtraSearchTerms>media triage torrent telegram prowlarr qbittorrent radarr sonarr seerr tmdb imdb parents guide</ExtraSearchTerms>
+  <Requires>PostgreSQL 17</Requires>
+  <Config Name="Web UI Port" Target="4850" Default="4850" Mode="tcp" Description="Web UI port" Type="Port" Display="always" Required="true" Mask="false"/>
+  <Config Name="Data" Target="/data" Default="/mnt/user/appdata/vettarr" Mode="rw" Description="Holds config.yaml, the Telegram and web sessions, the posters a Telegram source saves and the torrents a post brought" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Config path" Target="CONFIG_PATH" Default="/data/config.yaml" Mode="" Description="The config file inside the container" Type="Variable" Display="advanced" Required="true" Mask="false"/>
+  <Config Name="PostgreSQL Host" Target="POSTGRES_HOST" Default="" Mode="" Description="PostgreSQL hostname or IP" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PostgreSQL Port" Target="POSTGRES_PORT" Default="5432" Mode="" Description="PostgreSQL port" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="PostgreSQL User" Target="POSTGRES_USER" Default="vettarr" Mode="" Description="PostgreSQL user" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="PostgreSQL Password" Target="POSTGRES_PASSWORD" Default="" Mode="" Description="PostgreSQL password" Type="Variable" Display="always" Required="true" Mask="true"/>
+  <Config Name="PostgreSQL Database" Target="POSTGRES_DB" Default="vettarr" Mode="" Description="PostgreSQL database name" Type="Variable" Display="always" Required="true" Mask="false"/>
+  <Config Name="Web password hash" Target="WEB_PASSWORD_HASH" Default="" Mode="" Description="The line `vettarr web hash-password` prints; referenced from config.yaml as ${WEB_PASSWORD_HASH} under web.auth" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Telegram bot token" Target="TELEGRAM_BOT_TOKEN" Default="" Mode="" Description="Optional; referenced from config.yaml as ${TELEGRAM_BOT_TOKEN}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="TMDB API key" Target="TMDB_API_KEY" Default="" Mode="" Description="Optional; referenced from config.yaml as ${TMDB_API_KEY}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Prowlarr API key" Target="PROWLARR_API_KEY" Default="" Mode="" Description="Optional; referenced from config.yaml as ${PROWLARR_API_KEY}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="qBittorrent password" Target="QBITTORRENT_PASS" Default="" Mode="" Description="Optional; referenced from config.yaml as ${QBITTORRENT_PASS}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Timezone" Target="TZ" Default="Europe/Madrid" Mode="" Description="Timezone for logs and schedules" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+</Container>
