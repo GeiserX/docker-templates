@@ -35,7 +35,7 @@ https://github.com/GeiserX/docker-templates
 | [LynxPrompt](https://github.com/GeiserX/LynxPrompt) | `drumsergio/lynxprompt` | AI config management platform |
 | [Telegram slskd Local Bot](https://github.com/GeiserX/telegram-slskd-local-bot) | `drumsergio/telegram-slskd-local-bot` | Telegram bot for Soulseek/slskd music |
 | [Jellyfin Telegram Channel Sync](https://github.com/GeiserX/jellyfin-telegram-channel-sync) | `drumsergio/jellytelegram-sync` | Sync Jellyfin user access with Telegram |
-| [Media Triage](https://hub.docker.com/r/drumsergio/media-triage) | `drumsergio/media-triage` | Media pipeline dashboard |
+| [vettarr](https://github.com/GeiserX/vettarr) | `drumsergio/vettarr` | Media request triage: rules, review, delivery to qBittorrent, Radarr, Sonarr or Seerr (replaces Media Triage) |
 | [Pumperly](https://github.com/GeiserX/Pumperly) | `drumsergio/pumperly` | Fuel price & EV route planner |
 | [Duplicacy Exporter](https://github.com/GeiserX/duplicacy-exporter) | `ghcr.io/geiserx/duplicacy-exporter` | Prometheus exporter for Duplicacy metrics |
 | [Wayback-Diff](https://github.com/GeiserX/Wayback-Diff) (formerly Website-Diff) | `drumsergio/website-diff` | Web page comparison with Wayback Machine support |
