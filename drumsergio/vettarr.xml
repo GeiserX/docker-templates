@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>vettarr</Name>
-  <Repository>drumsergio/vettarr:1.0.0-rc.3</Repository>
+  <Repository>drumsergio/vettarr:1.0.0</Repository>
   <Registry>https://hub.docker.com/r/drumsergio/vettarr</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
