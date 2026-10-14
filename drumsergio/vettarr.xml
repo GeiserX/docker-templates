@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>vettarr</Name>
-  <Repository>drumsergio/vettarr:1.0.0</Repository>
+  <Repository>drumsergio/vettarr:1.0.2</Repository>
   <Registry>https://hub.docker.com/r/drumsergio/vettarr</Registry>
   <Network>bridge</Network>
   <Privileged>false</Privileged>
@@ -32,6 +32,13 @@ Licence AGPL-3.0-or-later. Docs: https://github.com/GeiserX/vettarr/blob/main/do
   <Config Name="Telegram bot token" Target="TELEGRAM_BOT_TOKEN" Default="" Mode="" Description="Optional; referenced from config.yaml as ${TELEGRAM_BOT_TOKEN}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <Config Name="TMDB API key" Target="TMDB_API_KEY" Default="" Mode="" Description="Optional; referenced from config.yaml as ${TMDB_API_KEY}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <Config Name="Prowlarr API key" Target="PROWLARR_API_KEY" Default="" Mode="" Description="Optional; referenced from config.yaml as ${PROWLARR_API_KEY}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
-  <Config Name="qBittorrent password" Target="QBITTORRENT_PASS" Default="" Mode="" Description="Optional; referenced from config.yaml as ${QBITTORRENT_PASS}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="qBittorrent password" Target="QBITTORRENT_PASSWORD" Default="" Mode="" Description="Optional; referenced from config.yaml as ${QBITTORRENT_PASSWORD}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Telegram API id" Target="TELEGRAM_API_ID" Default="" Mode="" Description="Optional, for a source read as your own account; referenced from config.yaml as ${TELEGRAM_API_ID}" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Telegram API hash" Target="TELEGRAM_API_HASH" Default="" Mode="" Description="Optional, for a source read as your own account; referenced from config.yaml as ${TELEGRAM_API_HASH}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Telegram phone" Target="TELEGRAM_PHONE" Default="" Mode="" Description="Optional, for a source read as your own account; referenced from config.yaml as ${TELEGRAM_PHONE}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Radarr API key" Target="RADARR_API_KEY" Default="" Mode="" Description="Optional; referenced from config.yaml as ${RADARR_API_KEY}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Sonarr API key" Target="SONARR_API_KEY" Default="" Mode="" Description="Optional; referenced from config.yaml as ${SONARR_API_KEY}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Seerr API key" Target="SEERR_API_KEY" Default="" Mode="" Description="Optional; referenced from config.yaml as ${SEERR_API_KEY}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="Seerr webhook secret" Target="SEERR_WEBHOOK_SECRET" Default="" Mode="" Description="Optional, what Seerr's webhook sends as its Authorization header; referenced from config.yaml as ${SEERR_WEBHOOK_SECRET}" Type="Variable" Display="advanced" Required="false" Mask="true"/>
   <Config Name="Timezone" Target="TZ" Default="Europe/Madrid" Mode="" Description="Timezone for logs and schedules" Type="Variable" Display="advanced" Required="false" Mask="false"/>
 </Container>
