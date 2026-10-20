@@ -4,6 +4,7 @@
   <Repository>drumsergio/telegram-archive:latest</Repository>
   <Registry>https://hub.docker.com/r/drumsergio/telegram-archive</Registry>
   <Network>bridge</Network>
+  <PostArgs>python -m telegram_archive schedule</PostArgs>
   <Privileged>false</Privileged>
   <Support>https://github.com/GeiserX/Telegram-Archive/issues</Support>
   <Project>https://github.com/GeiserX/Telegram-Archive</Project>
@@ -13,10 +14,16 @@ This is the backup container. For browsing archived messages, install the [b]Tel
 [br][br]&#xD;
 [b]Requires Telegram API credentials[/b] from https://my.telegram.org&#xD;
 [br][br]&#xD;
+[b]Log in to Telegram before the first start.[/b] Telegram sends a code that has to be typed back, and this container has no terminal attached, so run the image once by hand from the Unraid terminal with the same paths and credentials:&#xD;
+[br]&#xD;
+docker run -it --rm -v /mnt/user/appdata/telegram-archive/session:/data/session -v /mnt/user/appdata/telegram-archive/backups:/data/backups -e TELEGRAM_API_ID=... -e TELEGRAM_API_HASH=... -e TELEGRAM_PHONE=+15550100000 drumsergio/telegram-archive:latest python -m telegram_archive auth&#xD;
+[br][br]&#xD;
+The image runs as UID 1000, and Docker creates a missing folder as root, so create the two folders and chown them to 1000:1000 first. Full walkthrough: https://geiserx.github.io/Telegram-Archive/getting-started/unraid/&#xD;
+[br][br]&#xD;
 More info: https://github.com/GeiserX/Telegram-Archive</Overview>
   <Category>Backup: Network:Messenger</Category>
-  <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/telegram-archive.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/images/telegram-archive.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/main/drumsergio/telegram-archive.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/GeiserX/docker-templates/main/drumsergio/images/telegram-archive.png</Icon>
   <ExtraSearchTerms>telegram backup chat messages media archive export</ExtraSearchTerms>
   <Requires>Telegram API credentials from my.telegram.org</Requires>
   <Config Name="Session Data" Target="/data/session" Default="/mnt/user/appdata/telegram-archive/session" Mode="rw" Description="Telethon session storage" Type="Path" Display="always" Required="true" Mask="false"/>

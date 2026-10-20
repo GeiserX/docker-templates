@@ -14,13 +14,12 @@
 More info: https://github.com/GeiserX/Telegram-Archive</Overview>
   <Category>Backup: Network:Messenger</Category>
   <WebUI>http://[IP]:[PORT:8000]/</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/telegram-archive-viewer.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/GeiserX/docker-templates/master/drumsergio/images/telegram-archive.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/GeiserX/docker-templates/main/drumsergio/telegram-archive-viewer.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/GeiserX/docker-templates/main/drumsergio/images/telegram-archive.png</Icon>
   <ExtraSearchTerms>telegram backup viewer chat messages archive browse</ExtraSearchTerms>
   <Requires>Telegram Archive backup container with existing backup data</Requires>
   <Config Name="Web UI Port" Target="8000" Default="8000" Mode="tcp" Description="Web viewer port" Type="Port" Display="always" Required="true" Mask="false"/>
-  <Config Name="Backups" Target="/data/backups" Default="/mnt/user/appdata/telegram-archive/backups" Mode="ro" Description="Backup data directory (read-only, shared with backup container)" Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Database" Target="/data/db" Default="/mnt/user/appdata/telegram-archive/session" Mode="ro" Description="SQLite database directory (read-only, shared with backup container)" Type="Path" Display="always" Required="true" Mask="false"/>
+  <Config Name="Backups" Target="/data/backups" Default="/mnt/user/appdata/telegram-archive/backups" Mode="rw" Description="Backup data directory, the same one the backup container uses. The SQLite database lives here and the viewer needs write access for its journal files, even though it never changes a message. Read-only works only with PostgreSQL." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Username" Target="VIEWER_USERNAME" Default="" Mode="" Description="Web viewer login username (empty = no auth)" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Password" Target="VIEWER_PASSWORD" Default="" Mode="" Description="Web viewer login password" Type="Variable" Display="always" Required="false" Mask="true"/>
   <Config Name="Timezone" Target="VIEWER_TIMEZONE" Default="Europe/Madrid" Mode="" Description="Timezone for message timestamps" Type="Variable" Display="always" Required="false" Mask="false"/>
